@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Rick and Morty's Quiz Game. Test your knowledge and find out if you're smart as Rick.. or Jerry ">
+    <title>Rick and Morty Quiz</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="responsiveDesign.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="index.js" rel="stylesheet" type="text/js" /> -->
+</head>
+
+<body>
+    <div class="container">
+        <img src="rick-and-morty.png" class="background-img"/>
+        <div class="start-page" style="display: none">
+            <div class="starting-container">
+                <h1 class="title">Rick and Morty: Quiz</h1>
+                <p>Are you smart as Rick, Morty or Jerry?</p>
+                <p>Lets find out</p>
+                <button name='enter' role="button" type="button" class="enter-game">Ready?</button>
+            </div>
+        </div>
+    
+        <main role="main">
+            <div class="question-page" style="display: none">
+                <div class="question"></div>
+                <form class="choices">
+                    <ol class="choice"></ol>
+                    <button name='input' type="submit">Submit</button>
+                </form>
+                <div class="question-index"></div>
+                <p><span class="correct-score"></span> correct / <span class="incorrect-score"></span> incorrect</p>
+            </div>
+    
+            <div class="answer-feedback-page" style="display: none"> 
+                <div class="feedback-container">
+                    <div class="feedback-header"></div>
+                    <div class="feedback-text"></div>
+                    <button type="button" class="next">next</button>
+                </div>
+            </div>
+        
+            <div class="final-feedback-page" style="display: none">
+                <img class="final-pic" />
+                <div class="statement-container">
+                    <p class="final-statement"></p>
+                    <p><span class="correct-score"></span> correct, <span class="incorrect-score"></span> incorrect</p>
+                </div>
+                <button role="button" type="button" name="reset" class="reset">Play Again?</button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

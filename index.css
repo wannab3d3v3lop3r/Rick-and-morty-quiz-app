@@ -3,164 +3,90 @@
   box-sizing:border-box;
 }
 
+.background-img {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 body {
-    background: url("https://images4.alphacoders.com/936/936813.png");
-    background-repeat:no-repeat;
-    height: auto;
-    max-width: 100%;
-    height: 1020px;
-    background-size: 100% 100%;
-    position: relative;
-  }
-  
-  h1{
-    margin-top: 50px;
-  }
-
-  .startingContainer{
-    background-color: white;
-    opacity: .7;
-    border-radius: 10px;
-    max-height: 100%;
-    width: 100%;
-  }
-
-  .startPage, .generateQuiz, .finalPage {
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    height: 500px;
-    width: 75%;
-    /* background-color:white;
-    opacity:.7; */
-    border-radius: 15%;
-  }
-
-  .question, .question1, .question0, .question2, .question3, questionTitle{
-    text-align: center;
-  }
-
-  .question1, .question0, .question2, .question3{
-    width:100px;
-    height:100px;
-    text-align:center;
-  }
-
-  .inputContainer{
-    background-color:white;
-    opacity: .7;
-    border-radius: 15px;
-    width: 300px;
-    height: 100px;
-    display:inline-block;
-    margin:10px;
-  }
-
-  /* .inputContainer:hover{
-    opacity: 1;
-  } */
-
-  .questionTitle{
-    height: 100px;
-    vertical-align:middle;
-    line-height: 3.3;
-    background-color: white;
-    opacity: .7;
-    border-radius: 30px;
-    margin-top: 5%;
-    text-align:center;
-    font-size:30px;
-    margin-bottom:50px;
-  }
-
-  .col-sm-12, .scoreBoard, .correctAnswer{
-    text-align: center;
-  }
-
-  input{
-    visibility: hidden;
-  }
-
-  label {
-    cursor: pointer;
-  }
-
-  .guess:checked + label {
-    opacity: 1;
-  }
-
-input[type="radio"]{
-  margin-top: 45px;
+  margin: 0;
 }
 
-input[type="radio"]:checked + label{
-  background-color: black;;
-  color:white;
+.container{
+  /* position: relative; */
 }
 
-.scoreBoard, .correctBoard, .incorrectBoard{
-  margin: 0px 10px 0px 10px;
-  display: inline-block;
-  margin-right: auto;
-  margin-left:auto;
-  background-color: white;
-  opacity: .7;
-  height: 50px;
-  padding-top: 17px;
-  width:100px;
-  border-radius: 15px;
+.container > img {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
 }
 
-.correctAnswer{
-  margin-top: 30px;
-  background-color: white;
-  width: 50%;
+.start-page, .question-page, .answer-feedback-page, .final-feedback-page {
+  max-width: 500px;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 10px;
-  opacity: .7;
-}
-
-.finalPage{
-  margin-left:auto;
-  margin-right:auto;
-  text-align:center;
-}
-
-.finalPic{
-  height: 500px;
-  width:500px;
+  position: relative;
   margin-top: 50px;
 }
 
-.finalStatement{
-  height: 50px;
-  max-width: 50%;
-  border-radius:10px;
-  background-color:white;
-  opacity:.7;
-  text-align:center;
-  margin-left:auto;
-  margin-right:auto;
-  padding-top:17px;
+.starting-container, .question-page {
+  height: 300px;
+  padding: 10px;
+  background-color: white;
+  opacity: .7;
+  border-radius: 20px;
 }
 
-startingContainer p {
-  width: 100%;
+.question-page, .feedback-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center
 }
 
-.hidden {
-  display: none;
+.feedback-container {
+  margin-top: 200px;
+  background-color: white;
+  opacity: .7;
+  border-radius: 10px;
 }
 
-.checkAnswer, .nextQuestion, .reset{
+.question-page button {
   display: block;
-  margin-left:auto;
   margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 15px;
+}
+
+.question {
+  margin-left: 25px;
+}
+
+.question-page ol {
+  list-style: none;
+  padding: 0;
+}
+
+.start-page, .final-feedback-page {
+  text-align: center;
+}
+
+.statement-container {
+  background-color: white;
+  opacity: .7;
+  border-radius: 10px;
+}
+
+.final-pic{
+  width: 300px;
+  margin-top: 50px;
 }
 
 @media only screen and (max-width: 592px) {
-  .question {
-      font-size: 16px;
-  }
+
 }
